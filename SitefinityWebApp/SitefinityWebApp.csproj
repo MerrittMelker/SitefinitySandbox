@@ -4,6 +4,10 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -769,12 +773,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureWebRole.cs" />
+    <Compile Include="Modules\Testimonials\Admin\TestimonialsAddEditView.ascx.cs">
+      <DependentUpon>TestimonialsAddEditView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Testimonials\Admin\TestimonialsAddEditView.ascx.designer.cs">
+      <DependentUpon>TestimonialsAddEditView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Testimonials\Admin\TestimonialsAdminView.ascx.cs">
+      <DependentUpon>TestimonialsAdminView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Testimonials\Admin\TestimonialsAdminView.ascx.designer.cs">
+      <DependentUpon>TestimonialsAdminView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Testimonials\ControlDesigners\SubmitTestimonialDesigner.cs" />
+    <Content Include="Modules\Testimonials\ControlDesigners\SubmitTestimonialDesignerTemplate.ascx" />
+    <Compile Include="Modules\Testimonials\ControlDesigners\TestimonialsViewDesigner.cs" />
+    <Compile Include="Modules\Testimonials\Data\Testimonial.cs" />
+    <Compile Include="Modules\Testimonials\Data\TestimonialsContext.cs" />
+    <Compile Include="Modules\Testimonials\Data\TestimonialsFluentMetaDataSource.cs" />
+    <Compile Include="Modules\Testimonials\Data\TestimonialsMetaDataProvider.cs" />
+    <Compile Include="Modules\Testimonials\SubmitTestimonial.ascx.cs">
+      <DependentUpon>SubmitTestimonial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Testimonials\SubmitTestimonial.ascx.designer.cs">
+      <DependentUpon>SubmitTestimonial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Testimonials\TestimonialsModule.cs" />
+    <Compile Include="Modules\Testimonials\TestimonialsView.ascx.cs">
+      <DependentUpon>TestimonialsView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modules\Testimonials\TestimonialsView.ascx.designer.cs">
+      <DependentUpon>TestimonialsView.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ClientBin\Telerik.Sitefinity.Analytics.xap" />
     <Content Include="ClientBin\Telerik.Sitefinity.Silverlight.xap" />
     <Content Include="Default.aspx" />
+    <Content Include="Modules\Testimonials\Admin\TestimonialsAddEditView.ascx" />
+    <Content Include="Modules\Testimonials\Admin\TestimonialsAdminView.ascx" />
+    <Content Include="Modules\Testimonials\ControlDesigners\SubmitTestimonialDesigner.js" />
+    <Content Include="Modules\Testimonials\ControlDesigners\TestimonialsViewDesigner.js" />
+    <Content Include="Modules\Testimonials\ControlDesigners\TestimonialsViewDesignerTemplate.ascx" />
+    <Content Include="Modules\Testimonials\SubmitTestimonial.ascx" />
+    <Content Include="Modules\Testimonials\TestimonialsView.ascx" />
     <Content Include="Silverlight.js" />
     <Content Include="Sitefinity\Default.aspx" />
     <Content Include="Sitefinity\Public\Services\Thunder\ThunderService.svc" />
