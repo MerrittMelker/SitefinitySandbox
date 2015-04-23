@@ -1,0 +1,57 @@
+﻿html body .RadInput_Default input.riTextBox, html body .RadInput_Default input.riFocused, html body .RadInput_Default input.riError
+{
+    padding: 3px;
+    border-color: #999;
+}
+html body .RadInput_Default, html body .RadInput_Default input.riTextBox 
+{
+    font-size: inherit;
+    font-family: inherit;
+}
+html body .RadInput_Default input.riError
+{
+    background-image: inherit;
+    color: inherit;
+}
+
+/* More actions common styles */
+.sfActionsDDL .rmActive
+{	
+    /*padding: 13px 14px;*/
+    padding:10px !important;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+	
+    -moz-box-shadow: 2px 4px 5px rgba(153, 153, 153, 0.5), -2px 4px 5px rgba(153, 153, 153, 0.5);
+    -o-box-shadow: 2px 4px 5px rgba(153, 153, 153, 0.5), -2px 4px 5px rgba(153, 153, 153, 0.5);
+    -webkit-box-shadow: 2px 4px 5px rgba(153, 153, 153, 0.5), -2px 4px 5px rgba(153, 153, 153, 0.5);
+    box-shadow: 2px 4px 5px rgba(153, 153, 153, 0.5), -2px 4px 5px rgba(153, 153, 153, 0.5);
+    /* For IE 8 */
+    -ms-filter: progid:DXImageTransform.Microsoft.Shadow( Strength=3, Direction=135, Color='#999999' );
+    /* For IE 5.5 – 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow( Strength=3, Direction=135, Color='#999999' );
+}
+.RadMenu_Sitefinity.sfActionsDDL  .rmGroup .rmItem a.rmLink
+{
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    
+    line-height: 21px;
+    min-height: 22px;
+    height: auto;
+    
+    border: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+.sfActionsDDL .rmActive .sfDeleteItm
+{
+    padding-top:5px !important;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-image: url(<% = WebResource("MyCustomModule.Web.Resources.delete_icon.png") %>);
+    background-position: 0 3px !important 
+}
